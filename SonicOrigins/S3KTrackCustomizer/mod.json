@@ -1,0 +1,249 @@
+{
+  "Groups": [
+    {
+      "Name": "Music",
+      "DisplayName": "Music",
+      "Elements": [
+        {
+          "Name": "Title",
+          "Description": [
+            "Choose the title screen music."
+          ],
+          "DisplayName": "Title Screen",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "OneUpAnniversary",
+          "Description": [
+            "Choose the 1-UP jingle that plays in modes other than Classic Mode."
+          ],
+          "DisplayName": "1-UP (Anniversary Mode)",
+          "Type": "OneUpEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "OneUpClassic",
+          "Description": [
+            "Choose the 1-UP jingle that plays in Classic Mode."
+          ],
+          "DisplayName": "1-UP (Classic Mode)",
+          "Type": "OneUpEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "Invincibility",
+          "Description": [
+            "Choose the invincibility music."
+          ],
+          "DisplayName": "Invincibility",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "Super",
+          "Description": [
+            "Choose the music when in your Super or Hyper form."
+          ],
+          "DisplayName": "Super",
+          "Type": "SuperEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 3
+        },
+        {
+          "Name": "Continue",
+          "Description": [
+            "Choose the music that plays on the Continue screen."
+          ],
+          "DisplayName": "Continue",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "AllClear",
+          "Description": [
+            "Choose the All Clear music that plays at the end of Launch Base Zone."
+          ],
+          "DisplayName": "All Clear",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "Ending",
+          "Description": [
+            "Choose the music that plays in the ending cutscenes."
+          ],
+          "DisplayName": "Ending",
+          "Type": "EndingEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "Credits",
+          "Description": [
+            "Choose the credits music."
+          ],
+          "DisplayName": "Credits",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "Results",
+          "Description": [
+            "Choose the music that plays in the Competition Mode results screen and the Blue Sphere menus."
+          ],
+          "DisplayName": "Results",
+          "Type": "S3SKEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 1
+        },
+        {
+          "Name": "BlueSphereResults",
+          "Description": [
+            "Choose the music that plays on the Blue Sphere results screen."
+          ],
+          "DisplayName": "Blue Spheres Results",
+          "Type": "BlueSphereResultsEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 2
+        }
+      ]
+    }
+  ],
+  "Enums": {
+    "S3SKEnum": [
+      {
+        "DisplayName": "Sonic 3",
+        "Value": 0,
+        "Description": [
+          "Use the track from Sonic the Hedgehog 3."
+        ]
+      },
+      {
+        "DisplayName": "Sonic & Knuckles",
+        "Value": 1,
+        "Description": [
+          "Use the track from Sonic & Knuckles."
+        ]
+      }
+    ],
+    "OneUpEnum": [
+      {
+        "DisplayName": "Sonic 3",
+        "Value": 0,
+        "Description": [
+          "Use the track from Sonic the Hedgehog 3."
+        ]
+      },
+      {
+        "DisplayName": "Sonic & Knuckles",
+        "Value": 1,
+        "Description": [
+          "Use the track from Sonic & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "Medallion",
+        "Value": 2,
+        "Description": [
+          "Use the Medallion sound effect from Sonic Mania."
+        ]
+      }
+    ],
+    "SuperEnum": [
+      {
+        "DisplayName": "Sonic 3 Invincibility",
+        "Value": 0,
+        "Description": [
+          "Use the Invincibility music from Sonic the Hedgehog 3."
+        ]
+      },
+      {
+        "DisplayName": "Sonic & Knuckles Invincibility",
+        "Value": 1,
+        "Description": [
+          "Use the Invincibility music from Sonic & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "Unused Song",
+        "Value": 2,
+        "Description": [
+          "Use the Unused Song from the Sonic 3 Prototype."
+        ]
+      },
+      {
+        "DisplayName": "Origins",
+        "Value": 3,
+        "Description": [
+          "Use the New Super Sonic music from Sonic Origins."
+        ]
+      }
+    ],
+    "EndingEnum": [
+      {
+        "DisplayName": "Sky Sanctuary Zone",
+        "Value": 0,
+        "Description": [
+          "Use the Sky Sanctuary Zone music, a la the Genesis version of Sonic (3) & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "Sonic 3 Credits",
+        "Value": 1,
+        "Description": [
+          "Use the Credits music from Sonic the Hedgehog 3."
+        ]
+      },
+      {
+        "DisplayName": "Sonic & Knuckles Credits",
+        "Value": 2,
+        "Description": [
+          "Use the Credits music from Sonic & Knuckles."
+        ]
+      }
+    ],
+    "BlueSphereResultsEnum": [
+      {
+        "DisplayName": "Sonic 3 Invincibility",
+        "Value": 0,
+        "Description": [
+          "Use the Invincibility music from Sonic the Hedgehog 3."
+        ]
+      },
+      {
+        "DisplayName": "Sonic & Knuckles Invincibility",
+        "Value": 1,
+        "Description": [
+          "Use the Invincibility music from Sonic & Knuckles, a la the Genesis version of Sonic & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "Unused Song",
+        "Value": 2,
+        "Description": [
+          "Use the Unused Song from the Sonic 3 Prototype."
+        ]
+      }
+    ]
+  },
+  "IniFile": "mod.ini"
+}

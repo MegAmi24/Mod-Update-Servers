@@ -51,7 +51,7 @@
         {
           "Name": "Super",
           "Description": [
-            "Choose the music when in your Super or Hyper form."
+            "Choose the music when in your Super or Hyper form or on the Original Blue Spheres Perfect screen."
           ],
           "DisplayName": "Super",
           "Type": "SuperEnum",
@@ -115,12 +115,12 @@
           "DefaultValue": 1
         },
         {
-          "Name": "BlueSphereResults",
+          "Name": "NBSPerfect",
           "Description": [
-            "Choose the music that plays on the Blue Sphere results screen."
+            "Choose the music that plays on the New Blue Sphere Perfect screen."
           ],
-          "DisplayName": "Blue Spheres Results",
-          "Type": "BlueSphereResultsEnum",
+          "DisplayName": "New Blue Spheres Perfect",
+          "Type": "SuperEnum",
           "MinValue": null,
           "MaxValue": null,
           "DefaultValue": 2
@@ -191,7 +191,7 @@
         ]
       },
       {
-        "DisplayName": "Origins",
+        "DisplayName": "Origins Super",
         "Value": 3,
         "Description": [
           "Use the New Super Sonic music from Sonic Origins."
@@ -218,29 +218,6 @@
         "Value": 2,
         "Description": [
           "Use the Credits music from Sonic & Knuckles."
-        ]
-      }
-    ],
-    "BlueSphereResultsEnum": [
-      {
-        "DisplayName": "Sonic 3 Invincibility",
-        "Value": 0,
-        "Description": [
-          "Use the Invincibility music from Sonic the Hedgehog 3."
-        ]
-      },
-      {
-        "DisplayName": "Sonic & Knuckles Invincibility",
-        "Value": 1,
-        "Description": [
-          "Use the Invincibility music from Sonic & Knuckles, a la the Genesis version of Sonic & Knuckles."
-        ]
-      },
-      {
-        "DisplayName": "Unused Song",
-        "Value": 2,
-        "Description": [
-          "Use the Unused Song from the Sonic 3 Prototype."
         ]
       }
     ]

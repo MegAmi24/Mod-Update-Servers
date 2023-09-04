@@ -18,7 +18,7 @@ Code "S3&K Music Customizer" by "MegAmi"
     static int EndingMusic = 1;
     static int CreditsMusic = 1;
     static int ResultsMusic = 1;
-    static int BlueSphereResultsMusic = 2;
+    static int NBSPerfectMusic = 2;
 //
 {
 	var RetroRflParamInfo = Reflection.GetDataInfo<RetroRflParam.Root>("retro_rfl_param");
@@ -45,7 +45,7 @@ Code "S3&K Music Customizer" by "MegAmi"
             EndingMusic = INI.Parse<int>(ini["Music"]["Ending"], EndingMusic);
             CreditsMusic = INI.Parse<int>(ini["Music"]["Credits"], CreditsMusic);
             ResultsMusic = INI.Parse<int>(ini["Music"]["Results"], ResultsMusic);
-            BlueSphereResultsMusic = INI.Parse<int>(ini["Music"]["BlueSphereResults"], BlueSphereResultsMusic);
+            NBSPerfectMusic = INI.Parse<int>(ini["Music"]["NBSPerfect"], NBSPerfectMusic);
         }
         else
         {
@@ -135,14 +135,18 @@ Code "S3&K Music Customizer" by "MegAmi"
 		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[58].m_cue.Value, "3K28_Continue");
 	}
 
-	// Blue Sphere Results (Default: Unused)
-    if (BlueSphereResultsMusic == 0) // S3
+	// New Blue Spheres Perfect (Default: Unused)
+    if (NBSPerfectMusic == 0) // S3
 	{
 		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[56].m_cue.Value, "3KF2_Invincible_STH3");
 	}
-    else if (BlueSphereResultsMusic == 1) // S&K
+    else if (NBSPerfectMusic == 1) // S&K
 	{
 		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[56].m_cue.Value, "3K2C_Invincible_SK");
+	}
+    else if (NBSPerfectMusic == 3) // Origins
+	{
+		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[56].m_cue.Value, "3KF4_New_Super_Sonic");
 	}
 }
 

@@ -64,7 +64,7 @@ Code "S3&K Music Customizer" by "MegAmi"
 	// 1-UP (Anniversary Mode) (Default: S3)
     if (OneUpAnniversaryMusic == 1) // S&K
 	{
-		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[0].m_cue.Value, "3K2A_OneUp_SK");
+		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[0].m_cue.Value, "3K2A_1up_SK");
 	}
     else if (OneUpAnniversaryMusic == 2) // Medallion
 	{
@@ -74,7 +74,7 @@ Code "S3&K Music Customizer" by "MegAmi"
 	// 1-UP (Classic Mode) (Default: S&K)
     if (OneUpAnniversaryMusic == 0) // S3
 	{
-		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[1].m_cue.Value, "3KF1_OneUp_STH3");
+		RFL_SET_PARAM(RetroRflParamInfo, m_RetroMusicSonic3k[1].m_cue.Value, "3KF1_1up_STH3");
 	}
     else if (OneUpAnniversaryMusic == 2) // Medallion
 	{

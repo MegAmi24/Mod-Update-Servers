@@ -1,0 +1,40 @@
+{
+  "Groups": [
+    {
+      "Name": "Main",
+      "DisplayName": "HUD",
+      "Elements": [
+        {
+          "Name": "IncludeDir0",
+          "Description": [
+            "Choose the look of the Coins counter in Sonic CD."
+          ],
+          "DisplayName": "CD Coins Counter",
+          "Type": "CDCoinsEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": ".\\cdcoins\\"
+        }
+      ]
+    }
+  ],
+  "Enums": {
+    "CDCoinsEnum": [
+      {
+        "DisplayName": "S1 Style",
+        "Value": ".",
+        "Description": [
+          "Use the vanilla Coins counter."
+        ]
+      },
+      {
+        "DisplayName": "CD Style",
+        "Value": ".\\cdcoins\\",
+        "Description": [
+          "Use a CD styled Coins counter."
+        ]
+      }
+    ]
+  },
+  "IniFile": "mod.ini"
+}

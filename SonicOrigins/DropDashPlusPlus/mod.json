@@ -1,0 +1,130 @@
+{
+  "Groups": [
+    {
+      "Name": "Main",
+      "DisplayName": "Animations",
+      "Elements": [
+        {
+          "Name": "IncludeDir1",
+          "Description": [
+            "Choose the Drop Dash animation for Sonic."
+          ],
+          "DisplayName": "Drop Dash Animation",
+          "Type": "DDAnimEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": ".\\ddanim\\origins\\"
+        },
+        {
+          "Name": "IncludeDir2",
+          "Description": [
+            "Choose the animation for the dust when landing while using the Drop Dash."
+          ],
+          "DisplayName": "Dust Animation",
+          "Type": "DustEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": ".\\dustanim\\origins\\"
+        }
+      ]
+    }
+  ],
+  "Enums": {
+    "DDAnimEnum": [
+      {
+        "DisplayName": "S3&K Origins",
+        "Value": ".\\ddanim\\origins\\",
+        "Description": [
+          "Use an animation in the style of the Origins version of Sonic 3 & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "MegAmi",
+        "Value": ".\\ddanim\\megami\\",
+        "Description": [
+          "Use MegAmi's animation from Sonic 1/2 Remastered EX."
+        ]
+      },
+      {
+        "DisplayName": "campbellsonic",
+        "Value": ".\\ddanim\\cbs\\",
+        "Description": [
+          "Use campbellsonic's animation from their original Drop Dash mod for Sonic CD 2011."
+        ]
+      },
+      {
+        "DisplayName": "Sonic 3 A.I.R.",
+        "Value": ".\\ddanim\\s3air\\",
+        "Description": [
+          "Use the animation from Sonic 3 Angel Island Revisited."
+        ]
+      },
+      {
+        "DisplayName": "Drop Dash + Mania-Styled",
+        "Value": ".\\ddanim\\ddpmania\\",
+        "Description": [
+          "Use the 'Mania-Styled' animation from the Drop Dash + mod for Sonic 3 A.I.R."
+        ]
+      },
+      {
+        "DisplayName": "Tyranger's Sprites",
+        "Value": ".\\ddanim\\tyranger\\",
+        "Description": [
+          "Use Tyranger's (NickyFan7) animation from the Drop Dash + mod for Sonic 3 A.I.R."
+        ]
+      },
+      {
+        "DisplayName": "Full Ball Sprite",
+        "Value": ".\\ddanim\\fullball\\",
+        "Description": [
+          "Simply use the full ball sprite, a la S1/S2/CD Origins."
+        ]
+      }
+    ],
+    "DustEnum": [
+      {
+        "DisplayName": "Mania (Genesis-Style)",
+        "Value": ".\\dustanim\\maniagen\\",
+        "Description": [
+          "Use the dust animation from the latest version of Sonic Mania, with a pure white look in the style of the spindash dust."
+        ]
+      },
+      {
+        "DisplayName": "Mania",
+        "Value": ".\\dustanim\\mania\\",
+        "Description": [
+          "Use the dust animation from the latest version of Sonic Mania."
+        ]
+      },
+      {
+        "DisplayName": "S3&K Origins (Genesis-Style)",
+        "Value": ".\\dustanim\\originsgen\\",
+        "Description": [
+          "Use the dust animation from the Origins version of Sonic 3 & Knuckles, with a pure white look in the style of the spindash dust."
+        ]
+      },
+      {
+        "DisplayName": "S3&K Origins",
+        "Value": ".\\dustanim\\origins\\",
+        "Description": [
+          "Use the dust animation from the Origins version of Sonic 3 & Knuckles."
+        ]
+      },
+      {
+        "DisplayName": "Spin Dash Dust",
+        "Value": ".\\dustanim\\spindash\\",
+        "Description": [
+          "Use the Spin Dash dust animation, a la Sonic 3 A.I.R."
+        ]
+      },
+      {
+        "DisplayName": "No Animation",
+        "Value": ".\\dustanim\\none\\",
+        "Description": [
+          "Don't use any animation."
+        ]
+      }
+    ]
+  },
+  "IniFile": "mod.ini"
+}

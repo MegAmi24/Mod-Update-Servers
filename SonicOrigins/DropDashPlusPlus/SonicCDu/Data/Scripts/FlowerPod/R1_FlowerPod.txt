@@ -155,7 +155,7 @@ sub ObjectMain
 
 	case FLOWERPOD_TRIGGER_ACTFINISH
 		if Player.State == Player_State_Climb
-			CallFunction(Player_Cancel_KnuxAbility)
+			CallFunction(Player_Unstick)
 			Player.ControlMode = CONTROLMODE_NONE
 		end if
 		if Player.ControlMode == CONTROLMODE_NONE

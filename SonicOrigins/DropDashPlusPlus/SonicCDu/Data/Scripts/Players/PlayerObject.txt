@@ -202,34 +202,34 @@
 #function Player_State_Hugged
 #function Player_State_Ramp3D
 #function Player_State_WaterCurrent
-#function Player_State_SetMJumpOffset // 68
+#function Player_SetJumpOffset
 #function Player_State_SizeChange
 
 // Origins Functions
-#function Player_State_DropDash // 38
-#function Player_Action_DblJumpKnux // 40
-#function Player_State_GlideLeft // 41
-#function Player_State_GlideRight // 42
-#function Player_State_GlideDrop // 43
-#function Player_State_GlideSlide // 44
-#function Player_State_Climb // 45
-#function Player_State_LedgePullUp // 46
-#function Player_State_GlideLeftNoGrip // 47
-#function Player_State_GlideRightNoGrip // 48
-#function Player_State_CheckRoofGlide // 49
-#function Player_Action_GlideDrop // 50
-#function Player_Action_DblJumpAmy // 51
-#function Player_Action_HammerDash // 52
-#function Player_State_HammerDash // 53
-#function Player_SetHammerDashSpeed // 54
-#function Player_Setup_Startup // 55
-#function Player_Action_DblJumpSonic // 56
+#function Player_State_DropDash
+#function Player_Action_DblJumpKnux
+#function Player_State_GlideLeft
+#function Player_State_GlideRight
+#function Player_State_GlideDrop
+#function Player_State_GlideSlide
+#function Player_State_Climb
+#function Player_State_LedgePullUp
+#function Player_State_GlideLeftNoGrip
+#function Player_State_GlideRightNoGrip
+#function Player_CheckRoofGlide
+#function Player_Action_GlideDrop
+#function Player_Action_DblJumpAmy
+#function Player_Action_HammerDash
+#function Player_State_HammerDash
+#function Player_SetHammerDashSpeed
+#function Player_Setup_Startup
+#function Player_Action_DblJumpSonic
 
-#function Player_State_ClimbBlock // 58
-#function Player_Cancel_KnuxAbility   // 59
-#function Player_Cancel_Climb   // 60
-#function Player_State_ForceNoGrip // 61
-#function Player_State_ForceGrip // 62
+#function Player_ClimbBlock
+#function Player_Unstick
+#function Player_CancelClimb
+#function Player_ForceNoGrip
+#function Player_ForceGrip
 
 // Used by badniks, if the conditions are met, they get destroyed, otherwise you get hurt
 function Player_BadnikBreak
@@ -385,7 +385,7 @@ function Player_Hit
 	end if
 end function
 
-function Player_State_ClimbBlock
+function Player_ClimbBlock
 #platform: Use_Origins
 	if Player.State != Player_State_Climb
 		TempValue0 = 0
@@ -432,7 +432,7 @@ function Player_State_ClimbBlock
 #endplatform
 end function
 
-function Player_Cancel_KnuxAbility
+function Player_Unstick
 #platform: Use_Origins
 	CallFunction(Player_Action_GlideDrop)
 	Player.PrevAnimation = ANI_GLIDING_DROP
@@ -441,7 +441,7 @@ function Player_Cancel_KnuxAbility
 end function
 
 
-function Player_Cancel_Climb
+function Player_CancelClimb
 #platform: Use_Origins
 	Player.Animation = ANI_WALKING
 	Player.Timer = 0
@@ -450,7 +450,7 @@ function Player_Cancel_Climb
 end function
 
 
-function Player_State_ForceNoGrip
+function Player_ForceNoGrip
 #platform: Use_Origins
 	if Player.State == Player_State_GlideLeft
 		Player.State = Player_State_GlideLeftNoGrip
@@ -462,7 +462,7 @@ function Player_State_ForceNoGrip
 end function
 
 
-function Player_State_ForceGrip
+function Player_ForceGrip
 #platform: Use_Origins
 	if Player.State == Player_State_GlideLeftNoGrip
 		Player.State = Player_State_GlideLeft
@@ -3520,7 +3520,7 @@ function Player_State_GlideLeft
 			Player.Skidding = 0
 		end if
 	end if
-	CallFunction(Player_State_CheckRoofGlide)
+	CallFunction(Player_CheckRoofGlide)
 #endplatform
 end function
 
@@ -3675,7 +3675,7 @@ function Player_State_GlideRight
 			Player.Skidding = 0
 		end if
 	end if
-	CallFunction(Player_State_CheckRoofGlide)
+	CallFunction(Player_CheckRoofGlide)
 #endplatform
 end function
 
@@ -4106,7 +4106,7 @@ function Player_State_GlideLeftNoGrip
 			Player.Skidding = 0
 		end if
 	end if
-	CallFunction(Player_State_CheckRoofGlide)
+	CallFunction(Player_CheckRoofGlide)
 #endplatform
 end function
 
@@ -4210,12 +4210,12 @@ function Player_State_GlideRightNoGrip
 			Player.Skidding = 0
 		end if
 	end if
-	CallFunction(Player_State_CheckRoofGlide)
+	CallFunction(Player_CheckRoofGlide)
 #endplatform
 end function
 
 
-function Player_State_CheckRoofGlide
+function Player_CheckRoofGlide
 #platform: Use_Origins
 	if Stage.ActiveList == REGULAR_STAGE
 		CheckEqual(Stage.ListPos, 68)

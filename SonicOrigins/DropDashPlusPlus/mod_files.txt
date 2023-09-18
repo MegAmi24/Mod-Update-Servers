@@ -1,0 +1,3 @@
+add SonicCD/Data/Scripts/FlowerPod/R1_FlowerPod.txt
+add SonicCD/Data/Scripts/Players/PlayerObject.txt
+add mod.ini

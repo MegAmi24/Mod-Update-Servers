@@ -59,6 +59,8 @@ public alias 0 : CSIDE_FLOOR
 public alias 1 : CSIDE_LWALL
 public alias 2 : CSIDE_RWALL
 public alias 3 : CSIDE_ROOF
+public alias 4 : CSIDE_LENTITY // Origins only
+public alias 5 : CSIDE_RENTITY // Origins only
 
 // Collision Modes
 public alias 0 : CMODE_FLOOR

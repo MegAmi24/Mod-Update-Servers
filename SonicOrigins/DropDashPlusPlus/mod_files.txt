@@ -2,4 +2,5 @@ add Sonic1u/Data/Scripts/Players/PlayerObject.txt
 add Sonic2u/Data/Scripts/Players/PlayerObject.txt
 add SonicCDu/Data/Scripts/FlowerPod/R1_FlowerPod.txt
 add SonicCDu/Data/Scripts/Players/PlayerObject.txt
+add SonicCDu/Data/Scripts/R8/EggMobile.txt
 add mod.ini

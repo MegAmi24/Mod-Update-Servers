@@ -1707,19 +1707,19 @@ sub ObjectPlayerInteraction
 						CheckResult = true
 					end if
 				end if
-				TempValue0 = 0
+				TempValue0 = false
 				if Stage.PlayerListPos == PLAYER_KNUCKLES
 					if Player.Animation == ANI_GLIDING
 						CheckResult = true
-						TempValue0  = 1
+						TempValue0  = true
 					end if
 					if Player.Animation == ANI_GLIDING_STOP
 						CheckResult = true
-						TempValue0  = 1
+						TempValue0  = true
 					end if
 				end if
 #endplatform
-				if CheckResult == true
+				if CheckResult == false
 					CallFunction(Player_Hit)
 					if Player.State == Player_State_GotHit
 						Object.Animation = EGGANI_LAUGH
@@ -1733,7 +1733,7 @@ sub ObjectPlayerInteraction
 					FlipSign(Player.YVelocity)
 #endplatform
 #platform: Use_Origins					
-					if TempValue0 == 0
+					if TempValue0 == false
 						FlipSign(Player.Speed)
 						FlipSign(Player.XVelocity)
 						FlipSign(Player.YVelocity)

@@ -1,3 +1,6 @@
+## Drop Dash ++ Version 1.5.3
+- Fixed incorrect hitbox detection with the Egg Spinner (Metallic Madness boss) in Sonic CD
+
 ## Drop Dash ++ Version 1.5.2
 - Fixed script errors occuring in Chemical Plant Zone in Sonic 2
 The update server had the filepaths for the changed files in 1.5.1 set incorrectly, so they weren't being downloaded. This has now been fixed; downloading this update should now give you the files changed in 1.5.1.

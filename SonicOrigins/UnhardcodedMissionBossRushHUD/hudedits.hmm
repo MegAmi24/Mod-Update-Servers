@@ -1,0 +1,56 @@
+Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
+//
+    #lib "Memory"
+    #lib "RSDK"
+
+    static bool SigScansInitialised = false;
+
+    static long ScoreText = 0;
+    static long ScoreNumber = 0;
+    static long HUDYPos = 0;
+//
+{
+    if (SigScansInitialised == false)
+    {
+        /* 2.0.1: 0x1401CE9E0 */
+        ScoreText = ScanSignature("\xFF\x90\xE8\x02\x00\x00\x8B\x45\xFF", "xxxxxxxxx");
+        /* 2.0.1: 0x1401CEA19 */
+        ScoreNumber = ScanSignature("\xE8\x52\xF7\xF3\xFF\x8B\x83\x8C\x01\x00\x00", "xxxxxxxxxxx");
+        /* 2.0.1: 0x1401CE36F */
+        HUDYPos = ScanSignature("\x05\x00\x00\x10\x00\x89\x8B\x80\x00\x00\x00\x89\x8B\x88\x00\x00", "xxxxxxxxxxxxxxxx");
+
+        Memory.Preserve(ScoreText, 6, true);
+        Memory.Preserve(ScoreNumber, 5, true);
+        Memory.Preserve(HUDYPos, 5, true);
+
+        SigScansInitialised = true;
+    }
+
+    // Show the S3&K HUD in Mission Mode
+	/* 2.0.1: 0x1401CE769 */
+    WriteNop(ScanSignature("\x48\x81\xC4\x88\x00\x00\x00\x5B\x5D\xC3\x48\x8B\x05\x6E\x0F\xCA\x02", "xxxxxxxxxxxxxxxxx"), 10);
+
+    // Show the S3&K HUD in Boss Rush
+	/* 2.0.1: 0x1401CE7D7 */
+    WriteNop(ScanSignature("\xE9\xE5\x09\x00\x00\x41\x83\x38\x03", "xxxxxxxxx"), 5);
+
+    if (RSDK.GetRSDKGlobalsAbsPtr() != 0)
+    {
+        // Check if game.playMode is set to BOOT_PLAYMODE_BOSSRUSH or BOOT_PLAYMODE_MISSION
+        byte gameMode = *(byte*)(RSDK.GetRSDKGlobalsAbsPtr() + 0x10C)
+        if (gameMode == 2 || gameMode == 4)
+        {
+            // Don't draw the score
+            WriteNop(ScoreText, 6);
+            WriteNop(ScoreNumber, 5);
+            WriteNop(HUDYPos, 5);
+        }
+        else
+        {
+            // Revert above
+            Memory.Restore(ScoreText);
+            Memory.Restore(ScoreNumber);
+			Memory.Restore(HUDYPos);
+        }
+    }
+}

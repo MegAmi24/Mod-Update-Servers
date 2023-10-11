@@ -7,7 +7,7 @@ Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
 
     static long ScoreText = 0;
     static long ScoreNumber = 0;
-    static long HUDYPos = 0;
+    static bool isMissionBoss = false;
 //
 {
     if (SigScansInitialised == false)
@@ -16,12 +16,9 @@ Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
         ScoreText = ScanSignature("\xFF\x90\xE8\x02\x00\x00\x8B\x45\xFF", "xxxxxxxxx");
         /* 2.0.1: 0x1401CEA19 */
         ScoreNumber = ScanSignature("\xE8\x52\xF7\xF3\xFF\x8B\x83\x8C\x01\x00\x00", "xxxxxxxxxxx");
-        /* 2.0.1: 0x1401CE36F */
-        HUDYPos = ScanSignature("\x05\x00\x00\x10\x00\x89\x8B\x80\x00\x00\x00\x89\x8B\x88\x00\x00", "xxxxxxxxxxxxxxxx");
 
         Memory.Preserve(ScoreText, 6, true);
         Memory.Preserve(ScoreNumber, 5, true);
-        Memory.Preserve(HUDYPos, 5, true);
 
         SigScansInitialised = true;
     }
@@ -38,19 +35,74 @@ Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
     {
         // Check if game.playMode is set to BOOT_PLAYMODE_BOSSRUSH or BOOT_PLAYMODE_MISSION
         byte gameMode = *(byte*)(RSDK.GetRSDKGlobalsAbsPtr() + 0x10C)
-        if (gameMode == 2 || gameMode == 4)
+        isMissionBoss = (gameMode == 2 || gameMode == 4)
+
+        fixed (bool* pIsMissionBoss = &isMissionBoss)
+        {
+            WriteAsmHook
+            (
+                $@"
+                    push rdi
+
+                    mov rdi, {(long)pIsMissionBoss}
+                    cmp byte ptr [rdi], 1 ; Is this Mission Mode or Boss Rush?
+                    jnz exit
+                    mov rdi, [rbp + 0x83] ; Get the Time y position
+                    sub rdi, 0x100000 ; Move it up by 16 pixels
+                    mov [rbp + 0x83], rdi ; Set the position
+
+                exit:
+                    pop rdi
+                ",
+
+                /* 2.0.1: 0x1401CE7F8 */
+                ScanSignature
+                (
+                    "\x8B\x43\x7C\x89\x85\x83\x00\x00\x00",
+                    "xxxxxxxxx"
+                ),
+
+                HookBehavior.Before
+            );
+
+            WriteAsmHook
+            (
+                $@"
+                    push rdi
+
+                    mov rdi, {(long)pIsMissionBoss}
+                    cmp byte ptr [rdi], 1 ; Is this Mission Mode or Boss Rush?
+                    jnz exit
+                    mov rdi, [rbp - 5] ; Get the Rings y position
+                    sub rdi, 0x100000 ; Move it up by 16 pixels
+                    mov [rbp - 5], rdi ; Set the position
+
+                exit:
+                    pop rdi
+                ",
+
+                /* 2.0.1: 0x1401CE80A */
+                ScanSignature
+                (
+                    "\x8B\x83\x84\x00\x00\x00\x89\x45\xFB",
+                    "xxxxxxxxx"
+                ),
+
+                HookBehavior.Before
+            );
+        }
+
+        if (isMissionBoss)
         {
             // Don't draw the score
             WriteNop(ScoreText, 6);
             WriteNop(ScoreNumber, 5);
-            WriteNop(HUDYPos, 5);
         }
         else
         {
             // Revert above
             Memory.Restore(ScoreText);
             Memory.Restore(ScoreNumber);
-			Memory.Restore(HUDYPos);
         }
     }
 }

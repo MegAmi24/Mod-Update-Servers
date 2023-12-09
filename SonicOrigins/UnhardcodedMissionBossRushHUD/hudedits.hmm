@@ -24,8 +24,8 @@ Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
     }
 
     // Show the S3&K HUD in Mission Mode
-	/* 2.0.1: 0x1401CE769 */
-    WriteNop(ScanSignature("\x48\x81\xC4\x88\x00\x00\x00\x5B\x5D\xC3\x48\x8B\x05\x6E\x0F\xCA\x02", "xxxxxxxxxxxxxxxxx"), 10);
+	/* 2.0.2: 0x1401CE769 */
+    WriteNop(ScanSignature("\x48\x81\xC4\x88\x00\x00\x00\x5B\x5D\xC3\x48\x8B\x05\xCC\xCC\xCA\x02", "xxxxxxxxxxxxx??xx"), 10);
 
     // Show the S3&K HUD in Boss Rush
 	/* 2.0.1: 0x1401CE7D7 */

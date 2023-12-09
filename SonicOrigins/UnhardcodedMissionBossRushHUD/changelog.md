@@ -1,3 +1,6 @@
+## Unhardcoded Mission/Boss Rush HUD Version 1.6.2
+- Fixed the S3&K HUD not showing in Mission Mode on game version 2.0.2
+
 ## Unhardcoded Mission/Boss Rush HUD Version 1.6.1
 - Fixed the S3&K HUD sometimes being offset in Mission Mode
 

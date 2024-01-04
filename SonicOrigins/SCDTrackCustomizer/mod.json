@@ -1,0 +1,366 @@
+{
+  "Groups": [
+    {
+      "Name": "Music",
+      "DisplayName": "Music",
+      "Elements": [
+        {
+          "Name": "Title",
+          "Description": [
+            "Choose the title screen music."
+          ],
+          "DisplayName": "Title",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "PPA",
+          "Description": [
+            "Choose the music for Palmtree Panic Present."
+          ],
+          "DisplayName": "Palmtree Panic",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "PPC",
+          "Description": [
+            "Choose the music for Palmtree Panic Good Future."
+          ],
+          "DisplayName": "Palmtree Panic \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "PPD",
+          "Description": [
+            "Choose the music for Palmtree Panic Bad Future."
+          ],
+          "DisplayName": "Palmtree Panic \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "CCA",
+          "Description": [
+            "Choose the music for Collision Chaos Present."
+          ],
+          "DisplayName": "Collision Chaos",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "CCC",
+          "Description": [
+            "Choose the music for Collision Chaos Good Future."
+          ],
+          "DisplayName": "Collision Chaos \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "CCD",
+          "Description": [
+            "Choose the music for Collision Chaos Bad Future."
+          ],
+          "DisplayName": "Collision Chaos \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "TTA",
+          "Description": [
+            "Choose the music for Tidal Tempest Present."
+          ],
+          "DisplayName": "Tidal Tempest",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "TTC",
+          "Description": [
+            "Choose the music for Tidal Tempest Good Future."
+          ],
+          "DisplayName": "Tidal Tempest \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "TTD",
+          "Description": [
+            "Choose the music for Tidal Tempest Bad Future."
+          ],
+          "DisplayName": "Tidal Tempest \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "QQA",
+          "Description": [
+            "Choose the music for Quartz Quadrant Present."
+          ],
+          "DisplayName": "Quartz Quadrant",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "QQC",
+          "Description": [
+            "Choose the music for Quartz Quadrant Good Future."
+          ],
+          "DisplayName": "Quartz Quadrant \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "QQD",
+          "Description": [
+            "Choose the music for Quartz Quadrant Bad Future."
+          ],
+          "DisplayName": "Quartz Quadrant \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "WWA",
+          "Description": [
+            "Choose the music for Wacky Workbench Present."
+          ],
+          "DisplayName": "Wacky Workbench",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "WWC",
+          "Description": [
+            "Choose the music for Wacky Workbench Good Future."
+          ],
+          "DisplayName": "Wacky Workbench \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "WWD",
+          "Description": [
+            "Choose the music for Wacky Workbench Bad Future."
+          ],
+          "DisplayName": "Wacky Workbench \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "SSA",
+          "Description": [
+            "Choose the music for Stardust Speedway Present."
+          ],
+          "DisplayName": "Stardust Speedway",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "SSC",
+          "Description": [
+            "Choose the music for Stardust Speedway Good Future."
+          ],
+          "DisplayName": "Stardust Speedway \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "SSD",
+          "Description": [
+            "Choose the music for Stardust Speedway Bad Future."
+          ],
+          "DisplayName": "Stardust Speedway \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "MMA",
+          "Description": [
+            "Choose the music for Metallic Madness Present."
+          ],
+          "DisplayName": "Metallic Madness",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "MMC",
+          "Description": [
+            "Choose the music for Metallic Madness Good Future."
+          ],
+          "DisplayName": "Metallic Madness \"G\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "MMD",
+          "Description": [
+            "Choose the music for Metallic Madness Bad Future."
+          ],
+          "DisplayName": "Metallic Madness \"B\" Mix",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "Special",
+          "Description": [
+            "Choose the music for the Special Stages."
+          ],
+          "DisplayName": "Special Stage",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "Boss",
+          "Description": [
+            "Choose the music for boss fights."
+          ],
+          "DisplayName": "Boss!!",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "FinalFever",
+          "Description": [
+            "Choose the music for the Egg Spinner boss fight in Metallic Madness."
+          ],
+          "DisplayName": "Final Fever",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "Invincible",
+          "Description": [
+            "Choose the music for invincibility.\n\nNote: Setting this to one option with the game's OST setting set to the other will result in the player's invincibility lasting shorter or longer than normal."
+          ],
+          "DisplayName": "Invincible!!",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "SpeedUp",
+          "Description": [
+            "Choose the music for the Speed Shoes."
+          ],
+          "DisplayName": "Speed Up!!",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "ZoneClear",
+          "Description": [
+            "Choose the music for finishing a zone.\n\nNote: Setting this to one option with the game's OST setting set to the other will result in the zone results tally delay being shorter or longer than normal."
+          ],
+          "DisplayName": "Zone Clear",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "GameOver",
+          "Description": [
+            "Choose the music for getting a Game Over."
+          ],
+          "DisplayName": "Game Over",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+        {
+          "Name": "LittlePlanet",
+          "Description": [
+            "Choose the music for the D.A. Garden.\n\nNote: This will also affect the Time Attack menu with the game's OST setting set to US."
+          ],
+          "DisplayName": "Little Planet",
+          "Type": "JPUSEnum",
+          "MinValue": null,
+          "MaxValue": null,
+          "DefaultValue": 0
+        },
+      ]
+    }
+  ],
+  "Enums": {
+    "JPUSEnum": [
+      {
+        "DisplayName": "Default",
+        "Value": 0,
+        "Description": [
+          "Let the OST setting decide."
+        ]
+      },
+      {
+        "DisplayName": "JP",
+        "Value": 1,
+        "Description": [
+          "Use the JP track."
+        ]
+      },
+      {
+        "DisplayName": "US",
+        "Value": 2,
+        "Description": [
+          "Use the US track."
+        ]
+      }
+    ]
+  },
+  "IniFile": "mod.ini"
+}

@@ -1,3 +1,7 @@
+## Unhardcoded Mission/Boss Rush HUD Version 1.6.3
+- Fixed the mod to work with the latest iteration of HMM's Community Codes
+  - **The Community Codes need to be updated in order for the mod to work!**
+
 ## Unhardcoded Mission/Boss Rush HUD Version 1.6.2
 - Fixed the S3&K HUD not showing in Mission Mode on game version 2.0.2
 

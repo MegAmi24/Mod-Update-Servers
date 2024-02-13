@@ -31,11 +31,9 @@ Code "Unhardcoded Mission/Boss Rush HUD Edits" by "MegAmi"
 	/* 2.0.1: 0x1401CE7D7 */
     WriteNop(ScanSignature("\xE9\xE5\x09\x00\x00\x41\x83\x38\x03", "xxxxxxxxx"), 5);
 
-    if (RSDK.GetRSDKGlobalsAbsPtr() != 0)
+    if (RSDK.GetRSDKGlobalsPtr() != 0)
     {
-        // Check if game.playMode is set to BOOT_PLAYMODE_BOSSRUSH or BOOT_PLAYMODE_MISSION
-        byte gameMode = *(byte*)(RSDK.GetRSDKGlobalsAbsPtr() + 0x10C)
-        isMissionBoss = (gameMode == 2 || gameMode == 4)
+        isMissionBoss = (RSDK.GetPlayMode() == RSDK.PlayMode.BossRush || RSDK.GetPlayMode() == RSDK.PlayMode.Mission)
 
         fixed (bool* pIsMissionBoss = &isMissionBoss)
         {

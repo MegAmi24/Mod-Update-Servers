@@ -7,7 +7,7 @@
         {
           "Name": "Title",
           "Description": [
-            "Choose the title screen music."
+            "Choose the title screen music. (Default: Sonic 3)"
           ],
           "DisplayName": "Title Screen",
           "Type": "S3SKEnum",
@@ -18,7 +18,7 @@
         {
           "Name": "OneUpAnniversary",
           "Description": [
-            "Choose the 1-UP jingle that plays in modes other than Classic Mode."
+            "Choose the 1-UP jingle that plays in modes other than Classic Mode. (Default: Sonic 3)"
           ],
           "DisplayName": "1-UP (Anniversary Mode)",
           "Type": "OneUpEnum",
@@ -29,7 +29,7 @@
         {
           "Name": "OneUpClassic",
           "Description": [
-            "Choose the 1-UP jingle that plays in Classic Mode."
+            "Choose the 1-UP jingle that plays in Classic Mode. (Default: Sonic & Knuckles)"
           ],
           "DisplayName": "1-UP (Classic Mode)",
           "Type": "OneUpEnum",
@@ -40,7 +40,7 @@
         {
           "Name": "Invincibility",
           "Description": [
-            "Choose the invincibility music."
+            "Choose the invincibility music. (Default: Sonic & Knuckles)"
           ],
           "DisplayName": "Invincibility",
           "Type": "S3SKEnum",
@@ -51,7 +51,7 @@
         {
           "Name": "Super",
           "Description": [
-            "Choose the music when in your Super or Hyper form or on the Original Blue Spheres Perfect screen."
+            "Choose the music when in your Super or Hyper form or on the Original Blue Spheres Perfect screen. (Default: Origins Super)"
           ],
           "DisplayName": "Super",
           "Type": "SuperEnum",
@@ -62,7 +62,7 @@
         {
           "Name": "Continue",
           "Description": [
-            "Choose the music that plays on the Continue screen."
+            "Choose the music that plays on the Continue screen. (Default: Sonic 3)"
           ],
           "DisplayName": "Continue",
           "Type": "S3SKEnum",
@@ -73,7 +73,7 @@
         {
           "Name": "AllClear",
           "Description": [
-            "Choose the All Clear music that plays at the end of Launch Base Zone."
+            "Choose the All Clear music that plays at the end of Launch Base Zone. (Default: Sonic & Knuckles)"
           ],
           "DisplayName": "All Clear",
           "Type": "S3SKEnum",
@@ -84,7 +84,7 @@
         {
           "Name": "Ending",
           "Description": [
-            "Choose the music that plays in the ending cutscenes."
+            "Choose the music that plays in the ending cutscenes. (Default: Sonic 3 Credits)"
           ],
           "DisplayName": "Ending",
           "Type": "EndingEnum",
@@ -95,7 +95,7 @@
         {
           "Name": "Credits",
           "Description": [
-            "Choose the credits music."
+            "Choose the credits music. (Default: Sonic & Knuckles)"
           ],
           "DisplayName": "Credits",
           "Type": "S3SKEnum",
@@ -106,7 +106,7 @@
         {
           "Name": "Results",
           "Description": [
-            "Choose the music that plays in the Competition Mode results screen and the Blue Sphere menus."
+            "Choose the music that plays in the Competition Mode results screen and the Blue Sphere menus. (Default: Sonic & Knuckles)"
           ],
           "DisplayName": "Results",
           "Type": "S3SKEnum",
@@ -117,7 +117,7 @@
         {
           "Name": "NBSPerfect",
           "Description": [
-            "Choose the music that plays on the New Blue Sphere Perfect screen."
+            "Choose the music that plays on the New Blue Sphere Perfect screen. (Default: Unused Song)"
           ],
           "DisplayName": "New Blue Spheres Perfect",
           "Type": "SuperEnum",
